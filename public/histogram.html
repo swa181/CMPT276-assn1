@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='histogram.css'>
+        <meta name="author" content="Sandy Wu">
+    </head>
+    <body>
+        <h1>Histogram Generator</h1>
+        <div class='blue-background'>
+            <h3>Lower bounds</h3>
+            <table id='lowerBoundsTable'>
+                <tr>
+                    <td>Max</td>
+                    <td><input id='BoundsMax' value='100.00' onkeydown="receiveInput('Max')" onkeyup="receiveInput('Max')"></input></td>
+                </tr>
+                <tr>
+                    <td>A+</td>
+                    <td><input id='BoundsA+' value='95.00' onkeydown="receiveInput('A+')" onkeyup="receiveInput('A+')"></input></td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td><input id='BoundsA' value='90.00' onkeydown="receiveInput('A')" onkeyup="receiveInput('A')"></input></td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td><input id='BoundsA-' value='85.00' onkeydown="receiveInput('A-')" onkeyup="receiveInput('A-')"></input></td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td><input id='BoundsB+' value='80.00' onkeydown="receiveInput('B+')" onkeyup="receiveInput('B+')"></input></td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td><input id='BoundsB' value='75.00' onkeydown="receiveInput('B')" onkeyup="receiveInput('B')"></input></td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td><input id='BoundsB-' value='70.00' onkeydown="receiveInput('B-')" onkeyup="receiveInput('B-')"></input></td>
+                </tr>
+                <tr>
+                    <td>C+</td>
+                    <td><input id='BoundsC+' value='65.00' onkeydown="receiveInput('C+')" onkeyup="receiveInput('C+')"></input></td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td><input id='BoundsC' value='60.00' onkeydown="receiveInput('C')" onkeyup="receiveInput('C')"></input></td>
+                </tr>
+                <tr>
+                    <td>C-</td>
+                    <td><input id='BoundsC-' value='55.00' onkeydown="receiveInput('C-')" onkeyup="receiveInput('C-')"></input></td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td><input id='BoundsD' value='50.00' onkeydown="receiveInput('D')" onkeyup="receiveInput('D')"></input></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td><input id='BoundsF' value='0.00' onkeydown="receiveInput('F')" onkeyup="receiveInput('F')"></input></td>
+                </tr>
+            </table>
+        </div>
+        <div class='blue-background'>
+            <h3>Histogram</h3>
+            <table id='histogramTable'>
+                <tr>
+                    <td>A+</td>
+                    <td id='HistA+'></td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td id='HistA'></td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td id='HistA-'></td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td id='HistB+'></td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td id='HistB'></td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td id='HistB-'></td>
+                </tr>
+                <tr>
+                    <td>C+</td>
+                    <td id='HistC+'></td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td id='HistC'></td>
+                </tr>
+                <tr>
+                    <td>C-</td>
+                    <td id='HistC-'></td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td id='HistD'></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td id='HistF'></td>
+                </tr>
+            </table>
+        </div>
+        <!-- This is for alerting errors -->
+        <div id='ErrorAlert' class='blue-background'>
+            <h3>Invalid input detected</h3>
+            <p>Please fix the following before proceding to display the histogram properly:</p>
+            <p id='BoundsErrorAlertMessage'></p>
+            <p id='DomainErrorAlertMessage'></p>
+        </div>
+    </body>
+    <script type='text/javascript' src='calculate.js'></script>
+</html>

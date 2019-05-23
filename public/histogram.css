@@ -1,0 +1,54 @@
+.blue-background {
+  background-color: rgb(234, 241, 243);
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(215, 231, 236);
+  padding: 0px 10px;
+}
+
+h1 {
+  font-family: tahoma,verdana,sans-serif;
+  font-weight: normal;
+  padding: 10px 0px;
+}
+
+h3 {
+  color: rgb(201, 13, 16);
+  font-weight: bolder;
+}
+
+td {
+  padding: 0px 50px 20px 20px;
+}
+
+input {
+  width: 60px;
+  text-align: right;
+  margin: 0px 50px 0px 0px;
+  padding: 3px 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+}
+
+
+.personIcon {
+  height: 40px;
+}
+
+#ErrorAlert {
+  opacity: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#BoundsErrorAlertMessage, #DomainErrorAlertMessage {
+  color: red;
+  text-decoration-line: underline;
+}
+
+p {
+  padding: 0px 10px;
+}
