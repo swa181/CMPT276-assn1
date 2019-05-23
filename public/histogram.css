@@ -19,8 +19,12 @@ h3 {
   font-weight: bolder;
 }
 
-td {
+#lowerBoundsTable td {
   padding: 0px 50px 20px 20px;
+}
+
+#histogramTable td {
+  padding: 0px 50px 10px 20px;
 }
 
 input {
