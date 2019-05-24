@@ -29,7 +29,7 @@ function receiveInput(inputCategory) {
     // 2. Check the bounds
     for (i = 0; i < gradesToStudentsLen + 1; i++) {
         let currLowerBoundInput = parseFloat(document.getElementById('Bounds' + lowerBoundLabels[i]).value);
-        let isValidInput = /^\-?[0-9]+\.?[0-9]*$/.test(document.getElementById('Bounds' + lowerBoundLabels[i]).value);
+        let isValidInput = /^\-?(([0-9]+\.?[0-9]*)|([0-9]*\.?[0-9]+))$/.test(document.getElementById('Bounds' + lowerBoundLabels[i]).value);
         if (!isValidInput) {
             setErrorAlert(errorType.domain, inputCategory);
             return;
